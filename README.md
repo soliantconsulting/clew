@@ -88,23 +88,23 @@ $\color{orange}{\textsf{orange}}$ properties are only included for FileMaker nat
 
 {  
 &nbsp;&nbsp; $\color{#3399CC}{\textsf{"directionOfTrace"}}$: // e.g. "caller_script_first"  
-&nbsp;&nbsp; $\color{#3399CC}{\textsf{"errorTrace"}}$: [ // an array, i.e. trace, of objects with the below structure  
+&nbsp;&nbsp; $\color{#3399CC}{\textsf{"errorTrace"}}$: [ // an array of objects with the below structure  
 &nbsp;&nbsp;&nbsp;&nbsp; {  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#3399CC}{\textsf{"code"}}$: // number or string representing an error condition  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"description"}}$: // an English description of the "code" json property above  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#3399CC}{\textsf{"hint"}}$: // either a string or a json structure with customized info about the error  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#3399CC}{\textsf{"script"}}$: { // object that contains at least a "name" property  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#3399CC}{\textsf{"name"}}$: // name of script, as returned by FileMaker function Get( ScriptName )  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"parameter}}$: {} // string or json, as returned by Get( ScriptParameter )  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"parameter"}}$: {} // string or json, as returned by Get( ScriptParameter )  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{orange}{\textsf{"stepErrorDetail"}}$: // whatever FileMaker function Get( LastErrorDetail ) returns  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{orange}{\textsf{"stepNumber"}}$: // e.g. 89, as returned by Get( LastErrorLocation )  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{orange}{\textsf{"stepType"}}$: // e.g. Send Mail, as returned by Get( LastErrorLocation )  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"state"}}$: { // optional object, 100% developer customizable  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"accountName"}}$: "Admin",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"fileName"}}$: "FM_Error_Stack_Trace",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"layoutName"}}$: "Table 1",  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"recordOpenCount"}}$: 0  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"accountName"}}$: // e.g. "Admin"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"fileName"}}$: // e.g. "FM_Error_Stack_Trace"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"layoutName"}}$: // e.g. "Table 1"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $\color{#009966}{\textsf{"recordOpenCount"}}$: // e.g. 0  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }  
 &nbsp;&nbsp;&nbsp;&nbsp; }  
 &nbsp;&nbsp; ]  
